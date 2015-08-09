@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS Exercise 6 Solution</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body ng-app="angular-books" ng-controller="MainController">
+
+	<!-- output -->
+	<ul>
+		<li ng-repeat="title in titles">{{ title | titleFilter }}</li>
+	</ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+
+    <!-- Add your additional scripts here -->
+    <script src="app.js"></script>
+</body>
+</html>
