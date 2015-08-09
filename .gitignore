@@ -1,0 +1,6 @@
+*node_modules/
+*coverage/
+*bower_components/
+*.tmp/
+.idea/
+*DS_Store/

@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="journey-overview-container">
+            <div class="journey-overview">
+                <!-- Cuisine Toolbar -->
+                <div class="food-types-widget">
+                    <div class="food-type-buttons">
+                        <a href='#journey-overview/american'><button data-category="american" class="btn btn-default category-button">American</button></a>
+                        <a href='#journey-overview/italian'><button data-category="italian" class="btn btn-default category-button">Italian</button></a>
+                        <a href='#journey-overview/mexican'><button data-category="mexican" class="btn btn-default category-button">Mexican</button></a>
+                        <a href='#journey-overview/japanese'><button data-category="japanese" class="btn btn-primary category-button">Japanese</button></a>
+                    </div>
+                    <h4>Sort By</h4>
+                    <div class="sort-control dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="sort-by" data-toggle="dropdown" aria-expanded="false">
+                            {{selectedOption.label}} <i class="fa fa-sort"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu" role="menu" aria-labelledby="sort-by">
+                            <li style="cursor:pointer" ng-repeat="option in options" ng-click="setOption(option)" value="{{option.value}}"><a>{{option.label}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Journey Information -->
+                <div class="food-type-overview">
+                    <div class="ft-progress">
+                        <div class="progress-sprite" style="background-image: url(/images/japanese-food-icon.png);">
+                        </div>
+                        <div class="radial-progress" data-progress="0">
+                            <div class="circle">
+                                <div class="mask full">
+                                    <div class="fill"></div>
+                                </div>
+                                <div class="mask half">
+                                    <div class="fill"></div>
+                                    <div class="fill fix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ft-description">
+                        <h5>Japanese food is based on rice with miso soup, with an emphasis on seasonal ingredients with side dishes often consisting of fish and vegetables cooked in broth.</h5>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="tasks" class="col-lg-12 journey-overview-items">
+    	<h3>Try These Items</h3>
+        <div ng-repeat="task in tasks | orderBy:optionProperty">
+            <task info="task"></task>
+        </div>
+    </div>
+</div>

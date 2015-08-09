@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS Exercise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body ng-app="angular-books" ng-controller="FormController">
+    <form novalidate>
+        Name: <input type="text" ng-model="user.name" required><br>
+        Email: <input type="email" ng-model="user.email"></form><br>
+        Password: <input type="password" ng-model="user.pass" ng-minlength="4" ng-maxlength="8"></form><br>
+        Role: <input type="checkbox" ng-model="user.role" ng-true-value="'Admin'" ng-false-value="'Basic'">Admin<br>
+        Role: <input type="radio" ng-model="user.gender" value="Male">Male <input type="radio" ng-model="user.gender" value="FeMail">FeMale<br>
+    </form>
+    <hr>
+    <h1>User Detail</h1>
+    <pre>
+        Name: {{user.name}}
+        Email: {{user.email}}
+    </pre>
+    <pre ng-bind="user|json">
+
+    </pre>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+
+    <!-- Add your additional scripts here -->
+    <script src="app.js"></script>
+</body>
+</html>
