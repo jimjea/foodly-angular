@@ -4,3 +4,5 @@
 *.tmp/
 .idea/
 **/.DS_Store
+**/.sass-cache
+**/.tmp
